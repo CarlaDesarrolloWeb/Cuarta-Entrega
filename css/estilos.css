@@ -93,7 +93,8 @@ p {
   grid-area: "section2";
   display: flex;
   justify-content: space-evenly;
-  flex-direction: row; }
+  flex-direction: row;
+  padding-top: 70px; }
   .section2 div {
     text-align: center;
     box-shadow: 3px 3px 3px #747474; }
@@ -243,7 +244,7 @@ p {
     padding: .35em .65em;
     font-size: 14px;
     font-family: "Noto Sans", sans-serif;
-    font-weight: 100; } }
+    font-weight: 300; } }
 
 @media only screen and (max-width: 992px) {
   .imgCarousel {

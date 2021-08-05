@@ -122,6 +122,7 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
+    padding-top: 70px;
 
     div{
         text-align: center;
@@ -315,7 +316,7 @@
       padding: .35em .65em;
       font-size: 14px;
       font-family: $tipografia;
-      font-weight: 100;
+      font-weight: 300;
     }
 }
   
