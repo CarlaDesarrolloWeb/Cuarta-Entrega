@@ -43,7 +43,7 @@
         }
     }
   
-  /* ESTILO TITULOS, TEXTO y LISTAS*/
+  /* ESTILO PARA TITULOS, TEXTO y LISTAS*/
   
   a {
     text-decoration: none;
@@ -97,7 +97,7 @@
                          
   }
   
-  /*Estilos para Index*/
+  /*ESTILO PARA INDEX*/
   
   .section1index {
     grid-area: "section1";
@@ -105,10 +105,6 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
-
-    img{
-        width: 60%;
-    }
 
     p{
         width: 60%;
@@ -120,11 +116,12 @@
   }
 
   
-  /* estilo para todos los divs dentro de section */
+  /* ESTILO PARA DIV DENTRO DE SECTION */
   .section2 {
     grid-area: "section2";
     display: flex;
     justify-content: space-evenly;
+    flex-direction: row;
 
     div{
         text-align: center;
@@ -133,23 +130,10 @@
         p{
         padding: 0 2em;
     }
-        h3{
-        height: 2em;
-    }
+
   }
 
-  .section2 div:hover img{height: 280px;}
-  
-  /*Carousel*/
-
-  .imgCarousel {
-    width: 90%;
-    height: 40%;
-    padding-left: 150px;
-    padding-bottom: 10px;
-}
-
-  /*Estilos page Biografía*/
+/*ESTILO PARA PAGE BIOGRAFIA*/
   
   .section1 {
     grid-area: "section1";
@@ -158,18 +142,23 @@
     height: auto; 
     flex-direction: row;
     align-items: left;
-    margin-top: 10px;
-    text-align: justify;
+    text-align: center;
     background-position: center;
-    
   }
 
+  @media only screen and (max-width: 1200px){
+    .section1 {
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+  
   .bg-primary {
     background-image: linear-gradient(rgb(192, 191, 191), rgb(235, 235, 235)) !important;
   }
 
   .badge {
-    display: inline-block;
+    display: flex;
     padding: .35em .65em;
     font-size: 13px;
     font-family: $tipografia;
@@ -180,6 +169,7 @@
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: .05rem;
+    flex-direction: row;
   }
   
   .section1 img {
@@ -188,7 +178,7 @@
     padding-left: 1em;
     padding-bottom: 1em;
     height: 395px;
-    background-image: linear-gradient(rgb(192, 191, 191), rgb(235, 235, 235));
+    background-image: linear-gradient(rgb(206, 203, 203), rgb(235, 235, 235));
   }
   
   .section1 p {
@@ -196,7 +186,7 @@
     padding-right: 1em;
   }
 
-  /*estilo para cada div con datos de obras del artista*/
+ /*ESTILO PARA DIV CON DATOS DE OBRAS DEL ARTISTA*/
   .datosObras1 {
     font-family: $tipografia;
     color: black;
@@ -211,26 +201,28 @@
     }
   }
 
-  /*extend para aplicar modificaciones en los datos de obras del artista*/
+ /*EXTEND PARA APLICAR MODIFICACIONES EN LOS DATOS DE OBRAS DEL ARTISTA*/
 .datosObras2 {
   @extend .datosObras1;
+  
   background-color: rgb(187, 209, 200);
 }
 
 .datosObras3 {
   @extend .datosObras1;
   background-color: rgb(202, 202, 202);
-}
-  
-  /*Estilos page Comienzos*/
-  .section1Comienzos p {
-    text-align: center;
-    background-image: linear-gradient(rgb(192, 191, 191), rgb(233, 233, 233));
-    background-position: center;
-    padding: 1em;
-  }
+} 
 
-  /*Mixins utilizado para page Comienzos, Hacia la Abstracción y Bauhaus*/
+/*ESTILO PAGE COMIENZOS*/
+    .section1Comienzos p {
+      text-align: center;
+      background-image: linear-gradient(rgb(192, 191, 191), rgb(233, 233, 233));
+      background-position: center;
+      padding: 1em;
+    }
+
+ 
+ /*MIXINS PARA PAGES COMIENZOS, HACIA LA ABSTRACCION Y BAUHAUS*/
   
   @mixin datosObras1 ($colorTexto, $tamanioTexto, $colorFondo) {
     font-family: $tipografia;
@@ -254,7 +246,101 @@
     @include datosObras1(white, 12px, rgb(29, 28, 28))
   }
 
-  /* FOOTER */
+  /*MEDIA QUERIES*/
+
+  @media only screen and (max-width: 492px){
+    .imgCarousel{
+    width: 350px;
+    height: 221px;
+    padding-left: 35px;
+    padding-bottom: 15px;
+    }
+  }
+
+  @media only screen and (max-width: 540px){
+    .imgCarousel{
+    width: 400px;
+    height: 252px;
+    padding-left: 45px;
+    padding-bottom: 15px;
+    }
+  }
+
+  @media only screen and (max-width: 600px){
+    .imgCarousel{
+    width: 450px;
+    height: 285px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    }
+
+   .section1 p {
+    font-size: 13px;  
+    }
+
+    .obrasComienzos img {
+    height: 210px;
+    width: 210px;
+  }
+
+    .obrasBauhaus img {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .imgCarousel{
+    width: 500px;
+    height: 316px;
+    padding-bottom: 15px;
+  }
+  .section2 {
+    flex-direction: column;}
+    
+  h3 {
+    font-size: 15px;
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (min-width: 992px){
+    .imgCarousel{
+    padding-left: 125px;
+    padding-bottom: 15px;
+    }
+  
+    .section2 div:hover img
+    {height: 280px;}
+}
+  
+@media only screen and (max-width: 992px){ 
+    .imgCarousel{
+    padding-bottom: 15px;
+    }
+
+    h3 {
+    font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    
+    .imgCarousel{
+    padding-left: 200px;
+    padding-bottom: 15px;
+    }
+}
+  
+@media only screen and (min-width: 1400px){
+    
+    .imgCarousel{
+    padding-left: 300px;
+    padding-bottom: 15px;
+    }
+}
+  
+ /* FOOTER */
   
   h6 {
     font-size: 10px;
