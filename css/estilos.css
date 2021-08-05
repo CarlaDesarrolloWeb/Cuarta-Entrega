@@ -94,7 +94,7 @@ p {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
-  padding-top: 60px; }
+  padding-top: 40px; }
   .section2 div {
     text-align: center;
     box-shadow: 3px 3px 3px #747474; }
@@ -242,15 +242,15 @@ p {
   .badge {
     display: flex;
     padding: .35em .65em;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 550; } }
+    font-size: 15px; } }
 
 @media only screen and (max-width: 992px) {
   .imgCarousel {
     padding-bottom: 15px; }
   h3 {
-    font-size: 15px; } }
+    font-size: 15px; }
+  .section2 {
+    padding-top: 65px; } }
 
 @media only screen and (min-width: 1200px) {
   .imgCarousel {
