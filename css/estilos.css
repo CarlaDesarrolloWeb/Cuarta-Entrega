@@ -233,7 +233,8 @@ p {
     font-size: 15px;
     margin-top: 15px; }
   .section1 p {
-    font-size: 15px; } }
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif; } }
 
 @media only screen and (min-width: 992px) {
   .imgCarousel {
