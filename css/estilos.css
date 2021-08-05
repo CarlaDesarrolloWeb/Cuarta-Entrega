@@ -117,7 +117,7 @@ p {
     align-items: center; } }
 
 .bg-primary {
-  background-image: linear-gradient(#c0bfbf, #ebebeb) !important; }
+  background-image: linear-gradient(#e2dede, #ebebeb) !important; }
 
 .badge {
   display: flex;
@@ -204,8 +204,8 @@ p {
 
 @media only screen and (max-width: 540px) {
   .imgCarousel {
-    width: 300px;
-    height: 189px;
+    width: 400px;
+    height: 252px;
     padding-left: 45px;
     padding-bottom: 15px; } }
 
@@ -233,7 +233,7 @@ p {
     font-size: 15px;
     margin-top: 15px; }
   .section1 p {
-    font-size: 18px; } }
+    font-size: 15px; } }
 
 @media only screen and (min-width: 992px) {
   .imgCarousel {
