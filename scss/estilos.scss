@@ -122,7 +122,7 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
-    padding-top: 70px;
+    padding-top: 60px;
 
     div{
         text-align: center;
@@ -314,9 +314,9 @@
     .badge {
       display: flex;
       padding: .35em .65em;
-      font-size: 14px;
-      font-family: $tipografia;
-      font-weight: 300;
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 550;
     }
 }
   
