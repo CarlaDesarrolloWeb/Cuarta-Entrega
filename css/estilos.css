@@ -231,7 +231,9 @@ p {
     flex-direction: column; }
   h3 {
     font-size: 15px;
-    margin-top: 15px; } }
+    margin-top: 15px; }
+  .section1 p {
+    font-size: 16px; } }
 
 @media only screen and (min-width: 992px) {
   .imgCarousel {
